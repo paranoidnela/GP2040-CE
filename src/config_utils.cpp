@@ -610,6 +610,18 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.addonOptions.analogOptions, smoothing_factor, !!SMOOTHING_FACTOR);
     INIT_UNSET_PROPERTY(config.addonOptions.analogOptions, analog_error, ANALOG_ERROR);
 
+    // addonOptions.FSROptions
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, enabled, !!FSR_INPUT_ENABLED);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcPinLeft, ANALOG_ADC_PIN_LEFT);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcPinRight, ANALOG_ADC_PIN_RIGHT);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcPinUp, ANALOG_ADC_PIN_UP);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcPinDown, ANALOG_ADC_PIN_DOWN);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcThresholdLeft, ANALOG_ADC_THRESHOLD_LEFT);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcThresholdRight, ANALOG_ADC_THRESHOLD_RIGHT);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcThresholdUp, ANALOG_ADC_THRESHOLD_UP);
+    INIT_UNSET_PROPERTY(config.addonOptions.FSROptions, analogAdcThresholdDown, ANALOG_ADC_THRESHOLD_DOWN);
+
+
     // addonOptions.turboOptions
     INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, enabled, !!TURBO_ENABLED);
     INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, deprecatedButtonPin, (Pin_t)-1);
